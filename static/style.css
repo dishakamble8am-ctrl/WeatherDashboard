@@ -1,0 +1,561 @@
+/* =================================
+   GLOBAL STYLING
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background: linear-gradient(
+        135deg,
+        #d9f0ff,
+        #e9e0ff,
+        #ffe5df
+    );
+
+    color: #253858;
+
+    min-height: 100vh;
+
+    font-family: 'Segoe UI', sans-serif;
+
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+h1 {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #334e8c;
+
+    letter-spacing: -1px;
+
+}
+
+.text-center > p {
+
+    color: #657799;
+
+    font-size: 17px;
+
+}
+
+
+/* =================================
+   SEARCH BAR
+================================= */
+
+.search-box {
+
+    max-width: 600px;
+
+}
+
+.form-control {
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 15px 0 0 15px;
+
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(70, 100, 150, 0.08);
+
+}
+
+.form-control:focus {
+
+    box-shadow: 0 0 0 3px rgba(100, 150, 255, 0.2);
+
+}
+
+
+.btn-primary {
+
+    padding: 14px 28px;
+
+    border: none;
+
+    border-radius: 0 15px 15px 0;
+
+    background: linear-gradient(
+        135deg,
+        #648cff,
+        #8465e8
+    );
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+.btn-primary:hover {
+
+    background: linear-gradient(
+        135deg,
+        #4b73e8,
+        #704bd1
+    );
+
+    transform: scale(1.03);
+
+}
+
+
+/* =================================
+   SEARCH HISTORY
+================================= */
+
+#searchHistory {
+
+    margin-top: 12px;
+
+}
+
+.history-btn {
+
+    background: white;
+
+    color: #596caa;
+
+    border: none;
+
+    border-radius: 25px;
+
+    padding: 8px 18px;
+
+    margin: 5px;
+
+    box-shadow: 0 4px 12px rgba(70, 100, 150, 0.08);
+
+    transition: 0.3s;
+
+}
+
+.history-btn:hover {
+
+    background: #8069e8;
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =================================
+   MAIN WEATHER CARD
+================================= */
+
+.main-weather {
+
+    background: linear-gradient(
+        135deg,
+        #6998ff,
+        #9276ed,
+        #b18be9
+    );
+
+    color: white;
+
+    padding: 50px 25px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 40px rgba(100, 110, 220, 0.25);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative circles */
+
+.main-weather::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.12);
+
+    top: -100px;
+
+    right: -50px;
+
+}
+
+
+.main-weather::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+
+    bottom: -70px;
+
+    left: -30px;
+
+}
+
+
+.main-weather h2 {
+
+    font-weight: 700;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.main-weather p {
+
+    color: white;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.weather-icon {
+
+    font-size: 95px;
+
+    margin: 15px;
+
+    position: relative;
+
+    z-index: 1;
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+
+#temperature {
+
+    font-size: 75px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.main-weather h4 {
+
+    font-weight: 500;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+/* Weather icon animation */
+
+@keyframes float {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+
+/* =================================
+   WEATHER DETAILS
+================================= */
+
+.section-title {
+
+    color: #40558c;
+
+    font-weight: 800;
+
+    margin-bottom: 22px;
+
+}
+
+
+.weather-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    height: 100%;
+
+    box-shadow: 0 8px 25px rgba(70, 100, 150, 0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.weather-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 30px rgba(70, 100, 150, 0.15);
+
+}
+
+
+.weather-card:nth-child(1) {
+
+    background: #fff0df;
+
+}
+
+.weather-card h5 {
+
+    color: #63759a;
+
+    font-size: 17px;
+
+}
+
+
+.weather-card h3 {
+
+    color: #40558c;
+
+    font-weight: 800;
+
+    margin-top: 15px;
+
+}
+
+
+/* =================================
+   FORECAST CARDS
+================================= */
+
+.forecast-card {
+
+    padding: 22px 10px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    height: 100%;
+
+    box-shadow: 0 8px 20px rgba(70, 100, 150, 0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.forecast-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+#forecastContainer .col-6:nth-child(1) .forecast-card {
+
+    background: #fff0d9;
+
+}
+
+
+#forecastContainer .col-6:nth-child(2) .forecast-card {
+
+    background: #e7e1ff;
+
+}
+
+
+#forecastContainer .col-6:nth-child(3) .forecast-card {
+
+    background: #dff5ee;
+
+}
+
+
+#forecastContainer .col-6:nth-child(4) .forecast-card {
+
+    background: #ffe2e8;
+
+}
+
+
+#forecastContainer .col-6:nth-child(5) .forecast-card {
+
+    background: #dceeff;
+
+}
+
+
+.forecast-card h5 {
+
+    color: #40558c;
+
+    font-weight: 700;
+
+}
+
+
+.forecast-icon {
+
+    font-size: 42px;
+
+    margin: 15px 0;
+
+}
+
+
+.forecast-card p {
+
+    font-size: 13px;
+
+    color: #68799c;
+
+}
+
+
+.forecast-card h6 {
+
+    color: #334e8c;
+
+    font-weight: 800;
+
+    margin: 12px 0;
+
+}
+
+
+/* =================================
+   LOADING ANIMATION
+================================= */
+
+#loader {
+
+    color: #526ba7;
+
+    font-weight: 600;
+
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+
+    color: #68799c;
+
+    padding-bottom: 20px;
+
+}
+
+
+footer a {
+
+    color: #6554c0;
+
+    font-weight: 700;
+
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media(max-width: 768px) {
+
+    h1 {
+
+        font-size: 32px;
+
+    }
+
+    #temperature {
+
+        font-size: 55px;
+
+    }
+
+    .weather-icon {
+
+        font-size: 70px;
+
+    }
+
+    .main-weather {
+
+        padding: 35px 15px;
+
+    }
+
+}
+
+
+@media(max-width: 576px) {
+
+    .weather-card {
+
+        padding: 22px;
+
+    }
+
+    .forecast-card {
+
+        padding: 18px 8px;
+
+    }
+
+}
